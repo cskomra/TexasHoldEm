@@ -141,7 +141,6 @@ public class PlayerHand {
 	 * @return				True or False.
 	 */
 	private boolean hasMultipleKinds(char[] cardRanks, int noKinds) {
-		// return the multiple it has, or -1 if not found
 		int outer = 0;
 		int inner = 0;
 		int repeats = 0;
