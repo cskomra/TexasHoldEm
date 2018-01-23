@@ -78,15 +78,15 @@ public class Game {
 		
 		int[] player1Ranks = player1.getHand().getSortedRanks();
 		int[] player2Ranks = player2.getHand().getSortedRanks();
-		for(int i = counter; i > 0; i--) {
-			if(player2Ranks[i-1] == player1Ranks[i-1]) {
-				if(i == 1) {
+		for(int i = counter - 1; i > 0; i--) {
+			if(player2Ranks[i] == player1Ranks[i]) {
+				if(i == 0) {
 					return null;
 				}
 				continue;
-			}else if(player2Ranks[i-1] > player1Ranks[i-1]) {
+			}else if(player2Ranks[i] > player1Ranks[i]) {
 				return player2;
-			}else if(player1Ranks[i-1] > player2Ranks[i-1]) {
+			}else if(player1Ranks[i] > player2Ranks[i]) {
 				return player1;
 			}
 		}		
